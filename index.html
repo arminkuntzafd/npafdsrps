@@ -1,41 +1,30 @@
 <!DOCTYPE html>
-<html lang="de" style="font-size: 16px;">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="AfD im Stadtrat Pirmasens, Satzung">
-  <meta name="description" content="Kreissatzung der AfD Pirmasens">
   <title>Kreissatzung - AfD Stadtrat Pirmasens</title>
-
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-
+    body { margin: 0; font-family: sans-serif; }
     header {
       background-color: #003366;
       color: white;
       padding: 1em;
-      text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1em;
     }
-
-    header img {
-      height: 50px;
-    }
+    header img { height: 50px; }
 
     nav {
       background-color: #0055aa;
       padding: 0.5em;
       text-align: center;
+      position: relative;
     }
-
     nav a {
       color: white;
       margin: 0 1em;
@@ -43,22 +32,29 @@
       font-weight: bold;
     }
 
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0055aa;
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 0.5em 1em;
+      text-align: left;
+    }
+
     .main-content {
-      width: 100%;
       height: calc(100vh - 160px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
     }
-
-    .iframe-box {
-      width: 100%;
-      height: 100%;
-    }
-
-    .iframe-box iframe {
+    iframe {
       width: 100%;
       height: 100%;
       border: none;
@@ -75,49 +71,50 @@
       header {
         flex-direction: column;
       }
-
-      nav {
-        font-size: 0.9em;
-      }
-
       nav a {
         display: block;
         margin: 0.5em 0;
+      }
+      .dropdown-content {
+        position: static;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Header -->
   <header>
-    <img src="images/logo.png" alt="Logo AfD">
+    <img src="images/AfD_Logo_blau.png" alt="Logo AfD">
     <h1>AfD im Stadtrat Pirmasens</h1>
   </header>
 
-  <!-- Navigation mit allen Satzungen -->
   <nav>
     <a href="index.html">Startseite</a>
     <a href="kontakt.html">Kontakt</a>
-    <a href="kreissatzung.html">Kreissatzung</a>
-    <a href="landessatzung.html">Landessatzung</a>
-    <a href="bundessatzung.html">Bundessatzung</a>
+    <div class="dropdown">
+      <a href="#">Satzung ▾</a>
+      <div class="dropdown-content">
+        <a href="kreissatzung.html">Kreissatzung</a>
+        <a href="landessatzung.html">Landessatzung</a>
+        <a href="bundessatzung.html">Bundessatzung</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Hauptinhalt -->
   <section class="main-content">
-    <div class="iframe-box">
-      <iframe src="dokumente/kreissatzung.pdf" title="Kreissatzung PDF" allowfullscreen loading="lazy"></iframe>
-    <iframe src="dokumente/landessatzung.pdf" title="Landessatzung PDF" allowfullscreen loading="lazy"></iframe>
-    <iframe src="dokumente/bundessatzung.pdf" title="Bundessatzung PDF" allowfullscreen loading="lazy"></iframe>
-    </div>
+    <iframe src="kreissatzung-inhalt.html"></iframe>
   </section>
 
-  <!-- Footer -->
+  <section class="main-content">
+    <iframe src="landessatzung-inhalt.html"></iframe>
+  </section>
+  
+  <section class="main-content">
+    <iframe src="bundessatzung-inhalt.html"></iframe>
+  </section>
+  
   <footer>
     <p>&copy; 2025 AfD Pirmasens | Alle Rechte vorbehalten.</p>
   </footer>
-
 </body>
 </html>
