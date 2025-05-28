@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="font-size: 15px;"><head>
+<html style="font-size: 16px;"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="keywords" content="AfD im Stadtrat Pirmasens"><meta name="description" content="">
