@@ -7,50 +7,87 @@
   <meta name="description" content="">
   <title>AfD Stadtrat Pirmasens</title>
 
-  <!-- Lokales CSS -->
   <link rel="stylesheet" href="nicepage.css" media="screen">
+  <script src="scripts/jquery.js" defer></script>
+  <script src="scripts/nicepage.js" defer></script>
 
-  <!-- Lokale Skripte -->
-  <script class="u-script" type="text/javascript" src="scripts/jquery.js" defer></script>
-  <script class="u-script" type="text/javascript" src="scripts/nicepage.js" defer></script>
-
-  <meta name="generator" content="Nicepage 7.7.3, nicepage.com">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    header, footer {
+      background-color: #003366;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      background-color: #0055aa;
+      padding: 0.5em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .image-box img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+    }
+    .map-box iframe {
+      width: 100%;
+      max-width: 570px;
+      height: 393px;
+      border: 0;
+    }
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 
-<body class="u-body u-overlap u-xl-mode" data-style="blank" data-lang="de">
+<body>
 
-  <section class="u-clearfix u-palette-4-light-1" id="block-1">
-    <div class="u-clearfix u-sheet">
+  <!-- Header -->
+  <header>
+    <h1>AfD im Stadtrat Pirmasens</h1>
+  </header>
 
-      <!-- Bild (lokal!) -->
-      <img class="u-image u-image-default" src="Schloplatz.jpg" alt="Schlossplatz" width="253" height="386" style="margin: 116px auto 9px 180px;">
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Startseite</a>
+    <a href="bundessatzung.html">Satzung</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
 
-      <!-- Google Maps iFrame -->
-      <div class="u-grey-light-2 u-map" style="width: 570px; height: 393px; margin: -386px auto 9px 37px;">
-        <iframe class="embed-responsive-item"
-          src="https://maps.google.com/maps?output=embed&amp;q=lemberger+str.+28+pirmasens&amp;z=15&amp;t=m"
-          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
-        </iframe>
-      </div>
-
+  <!-- Hauptinhalt -->
+  <section class="main-content">
+    <div class="image-box">
+      <img src="images/Schloplatz.jpg" alt="Schlossplatz in Pirmasens">
+    </div>
+    <div class="map-box">
+      <iframe src="https://maps.google.com/maps?output=embed&q=lemberger+str.+28+pirmasens&z=15&t=m" allowfullscreen loading="lazy"></iframe>
     </div>
   </section>
 
-  <!-- Stile für Layout-Responsive Design -->
-  <style>
-    @media (min-width: 1200px) {
-      .u-sheet { min-height: 518px; }
-    }
-    @media (max-width: 1199px) and (min-width: 992px),
-           (max-width: 991px) and (min-width: 768px),
-           (max-width: 767px) and (min-width: 576px),
-           (max-width: 575px) {
-      .u-sheet { min-height: 518px; }
-    }
-    .u-overlap:not(.u-sticky-scroll) .u-header {
-      background-color: var(--grey-75) !important;
-    }
-  </style>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AfD Pirmasens | Alle Rechte vorbehalten.</p>
+  </footer>
 
 </body>
 </html>
