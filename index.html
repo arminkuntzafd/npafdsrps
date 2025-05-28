@@ -7,6 +7,9 @@
   <meta name="description" content="">
   <title>AfD Stadtrat Pirmasens</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <style>
     body {
       margin: 0;
@@ -18,6 +21,14 @@
       color: white;
       padding: 1em;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+    }
+
+    header img {
+      height: 50px;
     }
 
     nav {
@@ -34,23 +45,23 @@
     }
 
     .main-content {
+      width: 100%;
+      height: calc(100vh - 160px); /* viewport height minus header/nav/footer */
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
+      overflow: hidden;
     }
 
-    .image-box img {
-      max-width: 100%;
-      height: auto;
-      border: 2px solid #ccc;
+    .map-box {
+      width: 100%;
+      height: 100%;
     }
 
     .map-box iframe {
       width: 100%;
-      max-width: 570px;
-      height: 393px;
+      height: 100%;
       border: 0;
     }
 
@@ -62,9 +73,8 @@
     }
 
     @media (max-width: 768px) {
-      .main-content {
+      header {
         flex-direction: column;
-        align-items: center;
       }
     }
   </style>
@@ -72,8 +82,9 @@
 
 <body>
 
-  <!-- Header -->
+  <!-- Header mit Logo -->
   <header>
+    <img src="images/logo.png" alt="Logo AfD">
     <h1>AfD im Stadtrat Pirmasens</h1>
   </header>
 
@@ -83,11 +94,8 @@
     <a href="kontakt.html">Kontakt</a>
   </nav>
 
-  <!-- Hauptinhalt -->
+  <!-- Hauptinhalt: Nur Google Map -->
   <section class="main-content">
-    <div class="image-box">
-      <img src="images/Schloplatz.jpg" alt="Schlossplatz in Pirmasens">
-    </div>
     <div class="map-box">
       <iframe src="https://maps.google.com/maps?output=embed&q=lemberger+str.+28+pirmasens&z=15&t=m" allowfullscreen loading="lazy"></iframe>
     </div>
