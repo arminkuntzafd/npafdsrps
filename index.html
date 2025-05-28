@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="AfD im Stadtrat Pirmasens">
   <meta name="description" content="">
-  <title>AfD im Stadtrat Pirmasens</title>
+  <title>AfD Stadtrat Pirmasens</title>
 
-  <!-- Lokale CSS-Datei -->
+  <!-- Lokales CSS -->
   <link rel="stylesheet" href="nicepage.css" media="screen">
 
   <!-- Lokale Skripte -->
@@ -16,27 +16,37 @@
 
   <meta name="generator" content="Nicepage 7.7.3, nicepage.com">
 </head>
-<body class="u-body u-overlap u-xl-mode">
+
+<body class="u-body u-overlap u-xl-mode" data-style="blank" data-lang="de">
 
   <section class="u-clearfix u-palette-4-light-1" id="block-1">
     <div class="u-clearfix u-sheet">
 
-      <!-- Lokales Bild -->
-      <img class="u-image u-image-default" src="Schloplatz.jpg" alt="Schloplatz" width="253" height="386" style="margin: 116px auto 9px 180px;">
+      <!-- Bild (lokal!) -->
+      <img class="u-image u-image-default" src="Schloplatz.jpg" alt="Schlossplatz" width="253" height="386" style="margin: 116px auto 9px 180px;">
 
       <!-- Google Maps iFrame -->
       <div class="u-grey-light-2 u-map" style="width: 570px; height: 393px; margin: -386px auto 9px 37px;">
         <iframe class="embed-responsive-item"
-          src="https://maps.google.com/maps?output=embed&amp;q=lemberger%20str.%2028%20pirmasens&amp;z=15&amp;t=m"
-          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          src="https://maps.google.com/maps?output=embed&amp;q=lemberger+str.+28+pirmasens&amp;z=15&amp;t=m"
+          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
         </iframe>
       </div>
 
     </div>
   </section>
 
-  <!-- Optional: Custom Style -->
+  <!-- Stile für Layout-Responsive Design -->
   <style>
+    @media (min-width: 1200px) {
+      .u-sheet { min-height: 518px; }
+    }
+    @media (max-width: 1199px) and (min-width: 992px),
+           (max-width: 991px) and (min-width: 768px),
+           (max-width: 767px) and (min-width: 576px),
+           (max-width: 575px) {
+      .u-sheet { min-height: 518px; }
+    }
     .u-overlap:not(.u-sticky-scroll) .u-header {
       background-color: var(--grey-75) !important;
     }
