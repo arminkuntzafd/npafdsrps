@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="AfD im Stadtrat Pirmasens">
-  <meta name="description" content="">
-  <title>AfD Stadtrat Pirmasens</title>
+  <meta name="keywords" content="AfD im Stadtrat Pirmasens, Satzung">
+  <meta name="description" content="Kreissatzung der AfD Pirmasens">
+  <title>Kreissatzung - AfD Stadtrat Pirmasens</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <style>
@@ -46,7 +45,7 @@
 
     .main-content {
       width: 100%;
-      height: calc(100vh - 160px); /* viewport height minus header/nav/footer */
+      height: calc(100vh - 160px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,15 +53,15 @@
       overflow: hidden;
     }
 
-    .map-box {
+    .iframe-box {
       width: 100%;
       height: 100%;
     }
 
-    .map-box iframe {
+    .iframe-box iframe {
       width: 100%;
       height: 100%;
-      border: 0;
+      border: none;
     }
 
     footer {
@@ -76,28 +75,40 @@
       header {
         flex-direction: column;
       }
+
+      nav {
+        font-size: 0.9em;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5em 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header mit Logo -->
+  <!-- Header -->
   <header>
-    <img src="images/AfD_Logo_blau.png" alt="Logo AfD">
+    <img src="images/logo.png" alt="Logo AfD">
     <h1>AfD im Stadtrat Pirmasens</h1>
   </header>
 
-  <!-- Navigation -->
+  <!-- Navigation mit allen Satzungen -->
   <nav>
     <a href="index.html">Startseite</a>
     <a href="kontakt.html">Kontakt</a>
+    <a href="kreissatzung.html">Kreissatzung</a>
+    <a href="landessatzung.html">Landessatzung</a>
+    <a href="bundessatzung.html">Bundessatzung</a>
   </nav>
 
-  <!-- Hauptinhalt: Nur Google Map -->
+  <!-- Hauptinhalt -->
   <section class="main-content">
-    <div class="map-box">
-      <iframe src="https://maps.google.com/maps?output=embed&q=lemberger+str.+28+pirmasens&z=15&t=m" allowfullscreen loading="lazy"></iframe>
+    <div class="iframe-box">
+      <iframe src="dokumente/kreissatzung.pdf" title="Kreissatzung PDF" allowfullscreen loading="lazy"></iframe>
     </div>
   </section>
 
